@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'page-unicode-text-converter',
@@ -12,8 +13,16 @@ export class PageUnicodeTextConverterComponent {
   @ViewChild('outText')
   public outText: ElementRef;
 
+  private regex = "[A-Za-z]";
+
+  public textConverterFormGroup: FormGroup = this.formBuilder.group({
+    regex: [this.regex],
+  });
+
+  constructor(private formBuilder: FormBuilder) {}
+
   public convertText() {
-    let outText = "";
+    let outText = '';
     if (this.inputText.nativeElement.value) {
       outText = this.parseTextToUnicode(this.inputText.nativeElement.value);
     }
@@ -21,10 +30,9 @@ export class PageUnicodeTextConverterComponent {
   }
 
   public parseTextToUnicode(inputText: String) {
-    let unicodeString = "";
+    let unicodeString = '';
     for (var i = 0; i < inputText.length; i++) {
-      const regex = /[A-Za-z ]/g;
-      let theUnicode: any = inputText[i].match(regex);
+      let theUnicode: any = inputText[i].match(new RegExp(this.textConverterFormGroup.controls['regex'].value));
       if (!theUnicode) {
         theUnicode = inputText.charCodeAt(i).toString(16).toUpperCase();
         while (theUnicode.length < 4) {
