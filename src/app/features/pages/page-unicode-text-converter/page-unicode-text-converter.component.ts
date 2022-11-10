@@ -15,6 +15,8 @@ export class PageUnicodeTextConverterComponent {
 
   private regex = "[A-Za-z]";
 
+  public autoCompleteSuggestions;
+
   public textConverterFormGroup: FormGroup = this.formBuilder.group({
     regex: [this.regex],
   });
@@ -43,5 +45,9 @@ export class PageUnicodeTextConverterComponent {
       } else unicodeString += inputText[i];
     }
     return unicodeString;
+  }
+
+  public autoCompleteSearch() {
+    this.autoCompleteSuggestions = ["[A-Za-z]", "[A-Za-z0-9 .!@#$%&*()_+-=;:,?\n]"];
   }
 }

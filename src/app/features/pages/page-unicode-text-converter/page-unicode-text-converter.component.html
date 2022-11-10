@@ -12,7 +12,7 @@
     <div class="input-text-area-buttons-container">
       <form class="input-text-area-buttons-container" [formGroup]="textConverterFormGroup" (ngSubmit)="convertText()">
         <div class="input-text-area-buttons-item">
-          <input type="text" pInputText placeholder="Regex" name="regex" formControlName="regex">
+          <p-autoComplete name="regex" formControlName="regex" [suggestions]="autoCompleteSuggestions" (completeMethod)="autoCompleteSearch()"></p-autoComplete>
         </div>
         <div class="input-text-area-buttons-item">
           <button pButton pRipple type="button" label="Convert" type="submit" class="p-button-rounded"></button>
