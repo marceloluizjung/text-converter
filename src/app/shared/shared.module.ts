@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng-lts/button';
+import { CarouselModule } from 'primeng-lts/carousel';
 import { InputTextareaModule } from 'primeng-lts/inputtextarea';
 import { PanelModule } from 'primeng-lts/panel';
 import { AutoCompleteModule } from 'primeng/autocomplete';
@@ -11,14 +12,16 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     PanelModule,
     ButtonModule,
     ReactiveFormsModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    CarouselModule,
   ],
   exports: [
     InputTextareaModule,
     PanelModule,
     ButtonModule,
     ReactiveFormsModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    CarouselModule,
   ],
 })
 export class SharedModule {}

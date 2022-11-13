@@ -1,0 +1,47 @@
+.home-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3a3a3a;
+  justify-content: center;
+  align-items: center;
+
+  .home-container-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .home-container-item-header {
+      display: flex;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      font-size: 40px;
+      letter-spacing: 2px;
+      word-spacing: 2px;
+      color: #FFF;
+      font-weight: normal;
+      text-decoration: none;
+      font-style: normal;
+      font-variant: normal;
+      text-transform: none;
+
+      .text-utils-item {
+        .text-utils-content {
+          border: 1px solid var(--surface-d);
+          border-radius: 3px;
+          margin: .3rem;
+          text-align: center;
+          padding: 2rem 0;
+        }
+
+        .text-utils-image {
+          width: 50%;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+        }
+      }
+    }
+
+    .home-container-item-footer {
+      display: flex;
+    }
+  }
+}
