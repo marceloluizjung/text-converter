@@ -1,4 +1,4 @@
-<p-tabMenu *ngIf="!isHome"  [model]="tabMenuItems" [activeItem]="activeItem">
+<p-tabMenu *ngIf="!isHome" [model]="tabMenuItems" [activeItem]="activeItem">
   <ng-template pTemplate="item" let-item let-i="index">
     <span id="{{i}}">{{item.label}}</span>
     <i class="{{item.icon}}"></i>

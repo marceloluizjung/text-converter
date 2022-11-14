@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { FeaturesRouting } from './features.routing';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
-  imports: [FeaturesRouting],
-  exports: [],
+  imports: [PagesModule],
+  exports: [PagesModule],
 })
 export class FeaturesModule {}

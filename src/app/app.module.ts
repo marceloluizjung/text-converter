@@ -5,10 +5,17 @@ import { TabMenuModule } from 'primeng-lts/tabmenu';
 
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
+import { FeaturesModule } from './features/features.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRouting, TabMenuModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FeaturesModule,
+    AppRouting,
+    TabMenuModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
