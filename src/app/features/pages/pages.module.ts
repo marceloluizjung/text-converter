@@ -11,6 +11,10 @@ import { PageUnicodeTextConverterComponent } from './page-unicode-text-converter
     PageHomeComponent,
     PageAboutUsComponent,
   ],
-  exports: [],
+  exports: [
+    PageUnicodeTextConverterComponent,
+    PageHomeComponent,
+    PageAboutUsComponent,
+  ],
 })
 export class PagesModule {}

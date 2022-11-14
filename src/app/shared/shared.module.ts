@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng-lts/button';
 import { CarouselModule } from 'primeng-lts/carousel';
 import { InputTextareaModule } from 'primeng-lts/inputtextarea';
 import { PanelModule } from 'primeng-lts/panel';
+import { TabMenuModule } from 'primeng-lts/tabmenu';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     ReactiveFormsModule,
     AutoCompleteModule,
     CarouselModule,
+    TabMenuModule
   ],
   exports: [
     InputTextareaModule,
@@ -22,6 +24,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     ReactiveFormsModule,
     AutoCompleteModule,
     CarouselModule,
+    TabMenuModule
   ],
 })
 export class SharedModule {}

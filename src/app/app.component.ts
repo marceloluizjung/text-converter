@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng-lts/api';
-import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -16,20 +13,7 @@ export class AppComponent implements OnInit {
 
   public isHome = true;
 
-  private navigationSubscription: Subscription;
-
-  constructor(private router: Router) {
-    this.navigationSubscription = router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event: any) => {
-        if (event && event.urlAfterRedirects.includes('home')) {
-          this.isHome = true;
-        } else {
-          this.isHome = false;
-          this.navigationSubscription.unsubscribe();
-        }
-      });
-  }
+  constructor() {}
 
   ngOnInit() {
     this.tabMenuItems = [

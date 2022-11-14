@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +10,7 @@ export class PageHomeComponent {
 
   responsiveOptions;
 
-  constructor(private router: Router) {
+  constructor() {
     this.responsiveOptions = [
       {
         breakpoint: '1024px',
@@ -43,6 +42,5 @@ export class PageHomeComponent {
   }
 
   tryIt() {
-    this.router.navigate(['/', 'unicodetextconverter']);
   }
 }
