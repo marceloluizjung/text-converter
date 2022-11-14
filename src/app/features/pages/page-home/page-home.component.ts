@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'page-home',
@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-home.component.scss'],
 })
 export class PageHomeComponent {
+
+  @Output("tryIt")
+  public tryItEvent = new EventEmitter();
+
   textUtilsItems: any;
 
   responsiveOptions;
@@ -42,5 +46,6 @@ export class PageHomeComponent {
   }
 
   tryIt() {
+    this.tryItEvent.emit(null);
   }
 }
