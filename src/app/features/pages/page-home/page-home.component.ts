@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'page-home',
@@ -7,14 +8,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class PageHomeComponent {
 
-  @Output("tryIt")
-  public tryItEvent = new EventEmitter();
-
   textUtilsItems: any;
 
   responsiveOptions;
 
-  constructor() {
+  constructor(private router: Router) {
     this.responsiveOptions = [
       {
         breakpoint: '1024px',
@@ -46,6 +44,6 @@ export class PageHomeComponent {
   }
 
   tryIt() {
-    this.tryItEvent.emit(null);
+    this.router.navigateByUrl("unicodetextconverter");
   }
 }

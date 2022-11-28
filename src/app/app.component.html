@@ -1,2 +1,7 @@
-<page-home *ngIf="!tryIt" (tryIt)="tryItOnPageHome()"></page-home>
-<page-unicode-text-converter *ngIf="tryIt"></page-unicode-text-converter>
+<p-tabMenu *ngIf="!isHome"  [model]="tabMenuItems" [activeItem]="activeItem">
+  <ng-template pTemplate="item" let-item let-i="index">
+    <span id="{{i}}">{{item.label}}</span>
+    <i class="{{item.icon}}"></i>
+  </ng-template>
+</p-tabMenu>
+<router-outlet></router-outlet>
